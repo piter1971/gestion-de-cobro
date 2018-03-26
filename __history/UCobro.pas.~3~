@@ -1,0 +1,48 @@
+unit UCobro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.DBCtrls;
+
+type
+  TForm4 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    DBLookupComboBox1: TDBLookupComboBox;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    procedure BitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+uses UModulo;
+
+procedure TForm4.BitBtn1Click(Sender: TObject);
+var
+ c:integer;
+begin
+ c:=Datamodule1.FDCPago.FieldByName('Clave').AsInteger;
+ DataModule1.FDAlumno.IndexName:='iClave';
+ DataModule1.FDAlumno.SetKey;
+ datamodule1.FDAlumno.FieldByName('Clave').AsInteger:=c;
+ if datamodule1.FDAlumno.GotoKey then
+   begin
+     dataModule1.FDAlumno.Edit;
+     dataModule1.FDAlumno.FieldByName('Pagado').AsBoolean:=true;
+     dataModule1.FDAlumno.Post;
+     dataModule1.FDAlumno.Refresh;
+   end;
+end;
+
+end.

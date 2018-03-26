@@ -1,0 +1,48 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 224
+  Width = 315
+  object miconexion: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\b' +
+        'asesDatos\repaso2\Win32\Debug\alumnos.db'
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 240
+    Top = 32
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 240
+    Top = 96
+  end
+  object FDAlumno: TFDTable
+    Active = True
+    IndexFieldNames = 'Clave'
+    Connection = miconexion
+    UpdateOptions.UpdateTableName = 'alumno'
+    TableName = 'alumno'
+    Left = 144
+    Top = 48
+  end
+  object FDAmigos: TFDTable
+    Active = True
+    IndexFieldNames = 'Codigo'
+    Connection = miconexion
+    UpdateOptions.UpdateTableName = 'amigos'
+    TableName = 'amigos'
+    Left = 152
+    Top = 112
+  end
+  object DataSource1: TDataSource
+    Left = 64
+    Top = 48
+  end
+  object DataSource2: TDataSource
+    Left = 72
+    Top = 120
+  end
+end

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/02/07 17:04:27.000.376,=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/03/09 17:18:27.000.244,=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/03/10 12:42:59.000.121,=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/03/17 11:52:35.000.193,=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/03/17 11:55:47.000.519,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UPrincipal.pas</Transaction>
+    <Transaction>2017/03/17 11:55:47.000.519,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UPrincipal.dfm</Transaction>
+    <Transaction>2017/03/17 11:55:48.000.712,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Project2.dproj</Transaction>
+    <Transaction>2017/03/17 12:08:59.000.730,=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit1.pas</Transaction>
+    <Transaction>2017/03/17 12:12:00.000.643,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit1.pas=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UModulo.pas</Transaction>
+    <Transaction>2017/03/17 12:12:00.000.643,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit1.dfm=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UModulo.dfm</Transaction>
+    <Transaction>2017/03/20 12:08:42.000.650,=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit1.pas</Transaction>
+    <Transaction>2017/03/20 12:10:15.000.115,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UApellidos.dfm=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit1.dfm</Transaction>
+    <Transaction>2017/03/20 12:10:15.000.115,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UApellidos.pas=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit1.pas</Transaction>
+    <Transaction>2017/03/20 12:17:25.000.774,=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit3.pas</Transaction>
+    <Transaction>2017/03/20 12:21:00.000.842,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UGrupo.pas=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit3.pas</Transaction>
+    <Transaction>2017/03/20 12:21:00.000.842,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UGrupo.dfm=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit3.dfm</Transaction>
+    <Transaction>2017/03/22 11:46:51.000.511,=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit4.pas</Transaction>
+    <Transaction>2017/03/22 11:47:29.000.395,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit4.pas=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UCobro.pas</Transaction>
+    <Transaction>2017/03/22 11:47:29.000.395,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit4.dfm=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UCobro.dfm</Transaction>
+    <Transaction>2017/03/22 13:01:13.000.449,=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit5.pas</Transaction>
+    <Transaction>2017/03/22 13:19:43.000.405,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit5.dfm=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UMaestro.dfm</Transaction>
+    <Transaction>2017/03/22 13:19:43.000.405,C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\Unit5.pas=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\basesDatos\repaso2\UMaestro.pas</Transaction>
+  </Transactions>
+</BorlandProject>

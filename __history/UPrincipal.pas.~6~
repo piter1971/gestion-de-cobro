@@ -1,0 +1,158 @@
+unit UPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls, Vcl.DBCtrls,
+  Data.DB, Vcl.Mask, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TForm2 = class(TForm)
+    MainMenu1: TMainMenu;
+    Men1: TMenuItem;
+    Alta1: TMenuItem;
+    Baja1: TMenuItem;
+    Modificacion1: TMenuItem;
+    N1: TMenuItem;
+    Salir1: TMenuItem;
+    Buscar1: TMenuItem;
+    AlumnosporApellidos1: TMenuItem;
+    Alumnosporgrupo1: TMenuItem;
+    ListadoAlumnos1: TMenuItem;
+    Pago1: TMenuItem;
+    PagoCuota1: TMenuItem;
+    VerPendientedePago1: TMenuItem;
+    Amigos1: TMenuItem;
+    Verrelaciondeamigos1: TMenuItem;
+    Ayuda1: TMenuItem;
+    Manual1: TMenuItem;
+    Acercade1: TMenuItem;
+    contenedor: TNotebook;
+    Shape1: TShape;
+    Shape2: TShape;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    DBCheckBox1: TDBCheckBox;
+    b1: TButton;
+    b2: TButton;
+    b3: TButton;
+    Label5: TLabel;
+    RadioGroup1: TRadioGroup;
+    DBGrid1: TDBGrid;
+    Button1: TButton;
+    procedure FormActivate(Sender: TObject);
+    procedure Alta1Click(Sender: TObject);
+    procedure b2Click(Sender: TObject);
+    procedure b1Click(Sender: TObject);
+    procedure b3Click(Sender: TObject);
+    procedure Modificacion1Click(Sender: TObject);
+    procedure ListadoAlumnos1Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure RadioGroup1Click(Sender: TObject);
+    procedure Baja1Click(Sender: TObject);
+    procedure Salir1Click(Sender: TObject);
+    procedure AlumnosporApellidos1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+uses UModulo,UApellidos;
+
+procedure TForm2.Alta1Click(Sender: TObject);
+begin
+contenedor.PageIndex:=0;
+DataModule1.FDAlumno.Append;
+b1.Enabled:=false;
+b3.Enabled:=false;
+
+end;
+
+procedure TForm2.AlumnosporApellidos1Click(Sender: TObject);
+begin
+Form1.ShowModal;
+end;
+
+procedure TForm2.b1Click(Sender: TObject);
+begin
+if not DataModule1.FDAlumno.bof then
+    DataModule1.FDAlumno.Prior;
+end;
+
+procedure TForm2.b2Click(Sender: TObject);
+begin
+Datamodule1.FDAlumno.Post;
+contenedor.PageIndex:=2;
+end;
+
+procedure TForm2.b3Click(Sender: TObject);
+begin
+if not DataModule1.FDAlumno.eof then
+    DataModule1.FDAlumno.next;
+end;
+
+procedure TForm2.Baja1Click(Sender: TObject);
+var
+ cad:String;
+begin
+ cad:=Inputbox('borrado','Clave que desea borrar:','');
+ datamodule1.FDAlumno.IndexName:='iClave';
+ datamodule1.FDAlumno.SetKey;
+ datamodule1.FDAlumno.FieldByName('Clave').AsInteger:=strtoint(cad);
+ if datamodule1.FDAlumno.GotoKey then
+     datamodule1.FDAlumno.Delete;
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+contenedor.PageIndex:=2;
+end;
+
+procedure TForm2.FormActivate(Sender: TObject);
+begin
+contenedor.PageIndex:=2;
+end;
+
+procedure TForm2.ListadoAlumnos1Click(Sender: TObject);
+begin
+contenedor.PageIndex:=1;
+end;
+
+procedure TForm2.Modificacion1Click(Sender: TObject);
+begin
+ contenedor.PageIndex:=0;
+DataModule1.FDAlumno.Edit;
+b1.Enabled:=true;
+b3.Enabled:=true;
+end;
+
+procedure TForm2.RadioGroup1Click(Sender: TObject);
+begin
+case radiogroup1.ItemIndex of
+  0:  DataModule1.FDAlumno.IndexName:='iClave';
+  1:  DataModule1.FDAlumno.IndexName:='iApellidos';
+  2:  DataModule1.FDAlumno.IndexName:='iGrupo';
+end;
+end;
+
+procedure TForm2.Salir1Click(Sender: TObject);
+begin
+close
+end;
+
+end.

@@ -1,0 +1,85 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 224
+  Width = 315
+  object miconexion: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\Optima\Documents\Embarcadero\Studio\Projects\b' +
+        'asesDatos\repaso2\Win32\Debug\alumnos.db'
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 240
+    Top = 32
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 240
+    Top = 96
+  end
+  object FDAlumno: TFDTable
+    Active = True
+    IndexFieldNames = 'Clave'
+    Connection = miconexion
+    UpdateOptions.UpdateTableName = 'alumno'
+    TableName = 'alumno'
+    Left = 144
+    Top = 48
+    object FDAlumnoClave: TFDAutoIncField
+      FieldName = 'Clave'
+      Origin = 'Clave'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object FDAlumnoNombre: TStringField
+      FieldName = 'Nombre'
+      Origin = 'Nombre'
+    end
+    object FDAlumnoApellidos: TStringField
+      FieldName = 'Apellidos'
+      Origin = 'Apellidos'
+      Size = 30
+    end
+    object FDAlumnoGrupo: TStringField
+      FieldName = 'Grupo'
+      Origin = 'Grupo'
+    end
+    object FDAlumnoCuota: TIntegerField
+      FieldName = 'Cuota'
+      Origin = 'Cuota'
+    end
+    object FDAlumnoPagado: TBooleanField
+      FieldName = 'Pagado'
+      Origin = 'Pagado'
+    end
+  end
+  object FDAmigos: TFDTable
+    Active = True
+    IndexFieldNames = 'Codigo'
+    Connection = miconexion
+    UpdateOptions.UpdateTableName = 'amigos'
+    TableName = 'amigos'
+    Left = 152
+    Top = 112
+  end
+  object DataSource1: TDataSource
+    DataSet = FDAlumno
+    Left = 64
+    Top = 48
+  end
+  object DataSource2: TDataSource
+    DataSet = FDAmigos
+    Left = 72
+    Top = 120
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = miconexion
+    SQL.Strings = (
+      'Select distinct Grupo from alumno')
+    Left = 224
+    Top = 160
+  end
+end
